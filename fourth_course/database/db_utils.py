@@ -1,14 +1,13 @@
+# -*- coding: utf-8 -*-
 import sqlite3
-
-db_name = 'orgtehnika.db'
 
 
 def get_db_connection():
     try:
-        connection = sqlite3.connect(db_name)
+        connection = sqlite3.connect('../orgtehnika.db')
         return connection
     except Exception as exc:
-        print('Ошибка при подключении к БД: {exc}'.format(
+        print('РћС€РёР±РєР° РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё Рє Р‘Р”: {exc}'.format(
             exc=exc
         ))
         return None
@@ -27,5 +26,6 @@ def if_user_exists(self, login, password):
     """, (login, password)
     )
     result = self.cursor.fetchone()
+    print(result)
 
     return result

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys
 from PyQt6.QtWidgets import QApplication
-from fourth_course.windows.login_window import LoginWindow
+from kvalik.windows.login_window import LoginWindow
 
 
 if __name__ == "__main__":
@@ -9,3 +9,6 @@ if __name__ == "__main__":
     window = LoginWindow()
     window.show()
     sys.exit(app.exec())
+
+
+
