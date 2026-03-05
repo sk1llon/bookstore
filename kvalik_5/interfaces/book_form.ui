@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BookForm</class>
+ <widget class="QWidget" name="BookForm">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>500</width><height>600</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>Книга</string>
+  </property>
+  <property name="minimumSize">
+   <size><width>480</width><height>580</height></size>
+  </property>
+  <layout class="QVBoxLayout" name="main_layout">
+   <property name="spacing"><number>10</number></property>
+   <property name="leftMargin"><number>20</number></property>
+   <property name="topMargin"><number>15</number></property>
+   <property name="rightMargin"><number>20</number></property>
+   <property name="bottomMargin"><number>15</number></property>
+   <item>
+    <widget class="QLabel" name="form_title_label">
+     <property name="text"><string>Добавление книги</string></property>
+     <property name="alignment"><set>Qt::AlignCenter</set></property>
+     <property name="font">
+      <font><pointsize>14</pointsize><bold>true</bold></font>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="image_layout">
+     <item>
+      <spacer name="img_left_spacer">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeHint" stdset="0">
+        <size><width>40</width><height>20</height></size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="image_label">
+       <property name="minimumSize">
+        <size><width>300</width><height>200</height></size>
+       </property>
+       <property name="maximumSize">
+        <size><width>300</width><height>200</height></size>
+       </property>
+       <property name="alignment"><set>Qt::AlignCenter</set></property>
+       <property name="frameShape"><enum>QFrame::Box</enum></property>
+       <property name="text"><string>Нет изображения</string></property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="img_right_spacer">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeHint" stdset="0">
+        <size><width>40</width><height>20</height></size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="image_btn_layout">
+     <item>
+      <spacer name="btn_left_spacer">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeHint" stdset="0">
+        <size><width>40</width><height>20</height></size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="change_image_button">
+       <property name="text"><string>Загрузить изображение</string></property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="btn_right_spacer">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeHint" stdset="0">
+        <size><width>40</width><height>20</height></size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="form_layout">
+     <property name="horizontalSpacing"><number>15</number></property>
+     <property name="verticalSpacing"><number>8</number></property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="id_label_text"><property name="text"><string>ID:</string></property></widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="id_input">
+       <property name="readOnly"><bool>true</bool></property>
+       <property name="placeholderText"><string>Авто</string></property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel"><property name="text"><string>Наименование:</string></property></widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="title_input">
+       <property name="placeholderText"><string>Введите название книги</string></property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel"><property name="text"><string>Жанр:</string></property></widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="genre_combo"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel"><property name="text"><string>Описание:</string></property></widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QTextEdit" name="description_input">
+       <property name="maximumSize">
+        <size><width>16777215</width><height>80</height></size>
+       </property>
+       <property name="placeholderText"><string>Введите описание</string></property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel"><property name="text"><string>Автор:</string></property></widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QComboBox" name="author_combo"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel"><property name="text"><string>Издательство:</string></property></widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QComboBox" name="publisher_combo"/>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel"><property name="text"><string>Цена:</string></property></widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QDoubleSpinBox" name="price_input">
+       <property name="maximum"><double>999999.99</double></property>
+       <property name="minimum"><double>0.00</double></property>
+       <property name="decimals"><number>2</number></property>
+       <property name="suffix"><string> ₽</string></property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel"><property name="text"><string>Год:</string></property></widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QSpinBox" name="year_input">
+       <property name="minimum"><number>1900</number></property>
+       <property name="maximum"><number>2100</number></property>
+       <property name="value"><number>2025</number></property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel"><property name="text"><string>Кол-во на складе:</string></property></widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QSpinBox" name="stock_input">
+       <property name="minimum"><number>0</number></property>
+       <property name="maximum"><number>999999</number></property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel"><property name="text"><string>Скидка (%):</string></property></widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QSpinBox" name="discount_input">
+       <property name="minimum"><number>0</number></property>
+       <property name="maximum"><number>100</number></property>
+       <property name="suffix"><string> %</string></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttons_layout">
+     <item>
+      <spacer name="btns_left_spacer">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeHint" stdset="0">
+        <size><width>40</width><height>20</height></size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="save_button">
+       <property name="text"><string>Сохранить</string></property>
+       <property name="minimumSize">
+        <size><width>120</width><height>35</height></size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancel_button">
+       <property name="text"><string>Отмена</string></property>
+       <property name="minimumSize">
+        <size><width>120</width><height>35</height></size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="btns_right_spacer">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeHint" stdset="0">
+        <size><width>40</width><height>20</height></size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

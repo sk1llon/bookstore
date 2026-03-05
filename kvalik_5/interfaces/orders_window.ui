@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OrdersWindow</class>
+ <widget class="QWidget" name="OrdersWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>900</width><height>500</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>Заказы</string>
+  </property>
+  <property name="minimumSize">
+   <size><width>750</width><height>400</height></size>
+  </property>
+  <layout class="QVBoxLayout" name="main_layout">
+   <property name="spacing"><number>8</number></property>
+   <property name="leftMargin"><number>10</number></property>
+   <property name="topMargin"><number>10</number></property>
+   <property name="rightMargin"><number>10</number></property>
+   <property name="bottomMargin"><number>10</number></property>
+   <!-- Top bar -->
+   <item>
+    <layout class="QHBoxLayout" name="top_bar_layout">
+     <item>
+      <widget class="QLabel" name="title_label">
+       <property name="text"><string>Список заказов</string></property>
+       <property name="font">
+        <font><pointsize>13</pointsize><bold>true</bold></font>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="top_spacer">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeHint" stdset="0">
+        <size><width>40</width><height>20</height></size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="back_button">
+       <property name="text"><string>Назад</string></property>
+       <property name="minimumSize">
+        <size><width>80</width><height>30</height></size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <!-- Orders table -->
+   <item>
+    <widget class="QTableWidget" name="orders_table">
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+    </widget>
+   </item>
+   <!-- Bottom bar -->
+   <item>
+    <layout class="QHBoxLayout" name="bottom_bar_layout">
+     <item>
+      <widget class="QPushButton" name="add_order_button">
+       <property name="text"><string>Добавить заказ</string></property>
+       <property name="minimumSize">
+        <size><width>140</width><height>35</height></size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="delete_order_button">
+       <property name="text"><string>Удалить заказ</string></property>
+       <property name="minimumSize">
+        <size><width>140</width><height>35</height></size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="bottom_spacer">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeHint" stdset="0">
+        <size><width>40</width><height>20</height></size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="count_label">
+       <property name="text"><string>Заказов: 0</string></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
